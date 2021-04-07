@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "cal": "git+ssh://git@git.onm.de:2222/onm/cal.git",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-modal": "^0.9.2",
     "moment": "^2.24.0",
     "responsive-toolkit": "~2.6.3",
