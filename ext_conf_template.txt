@@ -1,0 +1,26 @@
+# cat=basic/enable; type=boolean; label= jQuery einbinden
+loadJQuery = 0
+
+# cat=basic/enable; type=boolean; label= momentjs einbinden
+loadMomentjs = 1
+
+# cat=basic/enable; type=boolean; label= toastr einbinden
+loadToastr = 1
+
+# cat=basic/enable; type=boolean; label= onm_cal einbinden
+loadOnmCal = 1
+
+# cat=advanced/enable; type=boolean; label= Enable API
+enableAPI = 0
+
+# cat=advanced/enable; type=string; label= API URL
+apiUrl =
+
+# cat=advanced/enable; type=string; label= API USER (client_id)
+clientId =
+
+# cat=advanced/enable; type=string; label= API PASSWORD (client_secret)
+clientSecret =
+
+# cat=advanced/enable; type=string; label= Suite8 key (if any)
+s8key =

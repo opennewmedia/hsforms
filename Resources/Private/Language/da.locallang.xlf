@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-08-09T15:33:58Z" product-name="hsforms" target-language="da">
+		<header/>
+		<body>
+			<trans-unit id="btnlabel.default">
+				<source>Book the room</source>
+				<target>Book værelset</target>
+			</trans-unit>
+            <trans-unit id="tx_hsforms_form.name">
+				<source>Availability check</source>
+				<target>Tilgængelighedskontrol</target>
+			</trans-unit>
+			<trans-unit id="cat.view">
+				<source>Display</source>
+				<target>Skærm</target>
+			</trans-unit>
+			<trans-unit id="cat.validation">
+				<source>Validation</source>
+				<target>Validering</target>
+			</trans-unit>
+			<trans-unit id="cat.config">
+				<source>Configurations</source>
+				<target>Konfigurationer</target>
+			</trans-unit>
+			<trans-unit id="booking.culture">
+				<source>en-GB</source>
+				<target>da-DK</target>
+			</trans-unit>
+			<trans-unit id="booking.lang">
+				<source>de</source>
+				<target>da</target>
+			</trans-unit>
+			<trans-unit id="booking.s8LanguageCode">
+				<source>E</source>
+				<target>DK</target>
+			</trans-unit>
+			<trans-unit id="booking.momentDateFormat">
+				<source>DD/MM/YYYY</source>
+				<target>YYYY-MM-DD</target>
+			</trans-unit>
+			<trans-unit id="defaultSegment.title">
+				<source>Show all accommodations</source>
+				<target>Vis alle overnatningssteder</target>
+			</trans-unit>
+			<trans-unit id="restriction.maxRange.msg">
+				<source>Your selection was limited to {maxnights} nights.</source>
+				<target>Dit valg var begrænset til {maxnights} nætter.</target>
+			</trans-unit>
+			<trans-unit id="restriction.minRange.msg">
+				<source>Your selection has been extended to {minnights} nights.</source>
+				<target>Dit valg er blevet udvidet til {minnights} nætter.</target>
+			</trans-unit>
+			<trans-unit id="adaptation.dateRange.msg">
+				<source>This period is not selectable!</source>
+				<target>Denne periode kan ikke vælges!</target>
+			</trans-unit>
+			<trans-unit id="maxpersons.msg">
+				<source>The maximum number of people has been reached.</source>
+				<target>Det maksimale antal mennesker er nået.</target>
+			</trans-unit>
+			<trans-unit id="restriction.arrivalDay.msg">
+				<source>Arrivals are only possible on days {0}. Please choose another day of arrival.</source>
+				<target>Ankomster er kun mulige på dage {0}. Vælg en anden ankomstdag.</target>
+			</trans-unit>
+			<trans-unit id="date_from_label">
+				<source>From: </source>
+				<target>Fra: </target>
+			</trans-unit>
+			<trans-unit id="date_to_label">
+				<source>To: </source>
+				<target>Til: </target>
+			</trans-unit>
+
+			<trans-unit id="form_add_promotion_code">
+				<source>Add promotion code</source>
+				<target>Tilføj forfremmelseskode</target>
+			</trans-unit>
+			<trans-unit id="form_promotion_code_label">
+				<source>Promotion code:</source>
+				<target>Kampagne kode:</target>
+			</trans-unit>
+			<trans-unit id="form_rate_code_label">
+				<source>Rate code:</source>
+				<target>Bedøm kode:</target>
+			</trans-unit>
+			<trans-unit id="form_add_room">
+				<source>Add room</source>
+				<target>Tilføj plads</target>
+			</trans-unit>
+			<trans-unit id="form_submit">
+				<source>Check availability</source>
+				<target>Tjek tilgængelighed</target>
+			</trans-unit>
+			<trans-unit id="form_remove">
+				<source>Remove Room</source>
+				<target>Fjern plads</target>
+			</trans-unit>
+			<trans-unit id="form_room">
+				<source>Room</source>
+				<target>Værelse</target>
+			</trans-unit>
+			<trans-unit id="form_travel_period_label">
+				<source>Travel period:</source>
+				<target>Rejse periode:</target>
+			</trans-unit>
+			<trans-unit id="form_no_adults_label">
+				<source>Number of adults:</source>
+				<target>Antal voksne:</target>
+			</trans-unit>
+			<trans-unit id="form_no_children_label">
+				<source>Number of children:</source>
+				<target>Antal børn:</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_label">
+				<source>Age {0}. child:</source>
+				<target>Alder barn {0}:</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_below_option">
+				<source>Below</source>
+				<target>Under</target>
+			</trans-unit>
+			<trans-unit id="form_segment_label">
+				<source>Segment:</source>
+				<target>Segment:</target>
+			</trans-unit>
+			<trans-unit id="form_segment_all_option">
+				<source>All</source>
+				<target>Alle</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_year_option">
+				<source>year</source>
+				<target>år</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_years_option">
+				<source>years</source>
+				<target>år</target>
+			</trans-unit>
+			<trans-unit id="form_arrival">
+				<source>Arrival</source>
+				<target>Ankomstdag</target>
+			</trans-unit>
+			<trans-unit id="form_departure">
+				<source>Depature</source>
+				<target>Afrejsedag</target>
+			</trans-unit>
+			<trans-unit id="form_adults">
+				<source>Adults</source>
+				<target>Antal voksne</target>
+			</trans-unit>
+			<trans-unit id="form_children">
+				<source>Children</source>
+				<target>Antal børn</target>
+			</trans-unit>
+			<trans-unit id="form_advantages">
+				<source>Your advantages</source>
+				<target>Fordele for jer</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

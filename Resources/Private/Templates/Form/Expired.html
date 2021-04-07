@@ -1,0 +1,99 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Backend" />
+
+<f:section name="Buttons">
+	<be:moduleLayout.button.linkButton
+		icon="actions-add"
+		title="{f:translate(id: 'LLL:EXT:backend/Resources/Private/Language/locallang_layout.xlf:newRecordGeneral')}"
+		link="{be:uri.newRecord(table: 'be_users')}"
+	/>
+</f:section>
+
+<f:section name="Content">
+	<f:if condition="{bookers}">
+	<h1><f:translate key="module.heading.bookers" /></h1>
+		<div class="table-fit">
+			<table id="typo3-backend-user-list-compare" class="table table-hover">
+				<thead>
+					<tr>
+						<th>uid</th>
+						<th>pid</th>
+						<th>Header/Button Label</th>
+					</tr>
+				</thead>
+				<tbody>
+					<f:for each="{bookers}" as="booker" iteration="i">
+						<tr>
+							<td class="col-icon nowrap">
+								{booker.uid}
+							</td>
+							<td class="col-icon nowrap">
+								{booker.pid}
+							</td>
+							<td class="col-title">
+								<f:if condition="{booker.header}">
+									<f:then>
+										{booker.header}
+									</f:then>
+									<f:else>
+										{booker.tx_hsforms_form_btnlabel}
+									</f:else>
+								</f:if>
+							</td>
+						</tr>
+					</f:for>
+				</tbody>
+			</table>
+		</div>
+	</f:if>
+
+	<f:if condition="{travelPeriods}">
+
+	<h1><f:translate key="module.heading" /></h1>
+		<div class="table-fit">
+			<table id="typo3-backend-user-list-compare" class="table table-hover">
+				<thead>
+					<tr>
+						<th>uid</th>
+						<th>pid</th>
+						<th>Internal Name</th>
+						<th>Start</th>
+						<th>End</th>
+					</tr>
+				</thead>
+				<tbody>
+					<f:for each="{travelPeriods}" as="travelPeriod" iteration="i">
+						<tr>
+							<td class="col-icon nowrap">
+								{travelPeriod.uid}
+							</td>
+							<td class="col-icon nowrap">
+								{travelPeriod.pid}
+							</td>
+							<td class="col-title">
+								{travelPeriod.internalName}
+							</td>
+							<td class="col">
+								<f:format.date format="d-m-Y">{travelPeriod.start}</f:format.date>
+							</td>
+							<td class="col">
+								<f:format.date format="d-m-Y">{travelPeriod.end}</f:format.date>
+							</td>
+						</tr>
+					</f:for>
+				</tbody>
+			</table>
+		</div>
+	</f:if>
+
+	<f:if condition="!{travelPeriods} && !{bookers}">
+		<p><f:translate key="module.msg.nodata" /></p>
+	</f:if>
+</f:section>
+
+</html>

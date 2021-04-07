@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-08-09T15:33:58Z" product-name="hsforms">
+		<header/>
+		<body>
+			<trans-unit id="btnlabel.default">
+				<source>Book the room</source>
+			</trans-unit>
+            <trans-unit id="tx_hsforms_form.name">
+				<source>Availability check</source>
+			</trans-unit>
+			<trans-unit id="cat.view">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="shortcutLabel">
+				<source>Travel Periods</source>
+			</trans-unit>
+			<trans-unit id="module.heading">
+				<source>Expired Travel Periods</source>
+			</trans-unit>
+			<trans-unit id="module.heading.bookers">
+				<source>Expired Booker Forms</source>
+			</trans-unit>
+			<trans-unit id="module.msg.nodata">
+				<source>There are no bookers and travelperiods in DB.</source>
+			</trans-unit>
+			<trans-unit id="cat.validation">
+				<source>Validation</source>
+			</trans-unit>
+			<trans-unit id="cat.config">
+				<source>Configurations</source>
+			</trans-unit>
+			<trans-unit id="dayadjusted.notice">
+				<source>Day Adjusted</source>
+			</trans-unit>
+			<trans-unit id="booking.culture">
+				<source>en-GB</source>
+			</trans-unit>
+			<trans-unit id="booking.lang">
+				<source>en</source>
+			</trans-unit>
+			<trans-unit id="booking.s8LanguageCode">
+				<source>E</source>
+			</trans-unit>
+			<trans-unit id="booking.momentDateFormat">
+				<source>MM/DD/YYYY</source>
+			</trans-unit>
+			<trans-unit id="defaultSegment.title">
+				<source>Show all accommodations</source>
+			</trans-unit>
+			<trans-unit id="restriction.maxRange.msg">
+				<source>Your selection was limited to {maxnights} nights.</source>
+			</trans-unit>
+			<trans-unit id="restriction.minRange.msg">
+				<source>Your selection has been extended to {minnights} nights.</source>
+			</trans-unit>
+			<trans-unit id="adaptation.dateRange.msg">
+				<source>This period is not selectable</source>
+			</trans-unit>
+			<trans-unit id="maxpersons.msg">
+				<source>The maximum number of people has been reached.</source>
+			</trans-unit>
+			<trans-unit id="restriction.arrivalDay.msg">
+				<source>Arrivals are only possible on days {0}. Please choose another day of arrival.</source>
+			</trans-unit>
+			<trans-unit id="date_from_label">
+				<source>From: </source>
+			</trans-unit>
+			<trans-unit id="date_to_label">
+				<source>To: </source>
+			</trans-unit>
+
+			<trans-unit id="form_add_promotion_code">
+				<source>Add promotion code</source>
+			</trans-unit>
+			<trans-unit id="form_promotion_code_label">
+				<source>Promotion code:</source>
+			</trans-unit>
+			<trans-unit id="form_rate_code_label">
+				<source>Rate code:</source>
+			</trans-unit>
+			<trans-unit id="form_add_room">
+				<source>Add room</source>
+			</trans-unit>
+			<trans-unit id="form_submit">
+				<source>Check availability</source>
+			</trans-unit>
+			<trans-unit id="form_remove">
+				<source>Remove Room</source>
+			</trans-unit>
+			<trans-unit id="form_room">
+				<source>Room</source>
+			</trans-unit>
+			<trans-unit id="form_travel_period_label">
+				<source>Travel period:</source>
+			</trans-unit>
+			<trans-unit id="form_no_adults_label">
+				<source>Adults:</source>
+			</trans-unit>
+			<trans-unit id="form_no_children_label">
+				<source>Children:</source>
+			</trans-unit>
+			<trans-unit id="form_child_age_label">
+				<source>Age {0}. child:</source>
+			</trans-unit>
+			<trans-unit id="form_child_age_below_option">
+				<source>Below</source>
+			</trans-unit>
+			<trans-unit id="form_segment_label">
+				<source>Segment:</source>
+			</trans-unit>
+			<trans-unit id="form_segment_all_option">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="form_child_age_year_option">
+				<source>year</source>
+			</trans-unit>
+			<trans-unit id="form_child_age_years_option">
+				<source>years</source>
+			</trans-unit>
+			<trans-unit id="form_arrival">
+				<source>Arrival</source>
+			</trans-unit>
+			<trans-unit id="form_departure">
+				<source>Depature</source>
+			</trans-unit>
+			<trans-unit id="form_adults">
+				<source>Adults</source>
+			</trans-unit>
+			<trans-unit id="form_children">
+				<source>Children</source>
+			</trans-unit>
+			<trans-unit id="form_advantages">
+				<source>Your advantages</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

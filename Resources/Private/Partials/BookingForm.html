@@ -1,0 +1,265 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:section name="Main">
+<div id="tx-hsforms-form-{uid}" class="bookingForm {f:if(condition: '{layout} == 1', then: 'vertical--form', else: 'horizontal--form')}">
+    <!-- The hidden form -->
+    <form class="booking-form" method="get" target='_blank'>
+    </form>
+    <!-- Day adjustment notice -->
+    <div class="js-dayadjustmentnotice" style="display:none"><f:translate key="dayadjusted.notice" /></div>
+    <!-- Form to show the FE User -->
+    <form action="{ibelink}" method="GET" class="bookingFormUI">
+        <div class="hidden-fields">
+            <f:for each="{urlParams}" as="val" key="key">
+                <f:if condition="{key}">
+                    <input type="hidden" name="{key}" value="{val}" />
+                </f:if>
+            </f:for>
+        </div>
+        <v:asset.script name="bookingAsset{uid}">
+            $(document).ready(function() <f:format.raw>{</f:format.raw>
+                toastr.options.positionClass = '{settings.view.toastrPositionClass}';
+                moment.locale('{f:translate(key:'booking.lang')}');
+                var selector = '#tx-hsforms-form-{uid}';
+                $(selector).hsForms(<f:format.raw>{</f:format.raw>
+                    displayMessages: <f:format.raw>{</f:format.raw>
+                        'restriction.minRange': '{f:translate(key:'restriction.minRange.msg')}',
+                        'restriction.maxRange': '{f:translate(key:'restriction.maxRange.msg')}',
+                        //'adaptation.switch': 'An- /Abreise wurde vertauscht',
+                        'adaptation.dateRange': '{f:translate(key:'adaptation.dateRange.msg')}',
+                        'restriction.arrivalDay': '{f:translate(key:'restriction.arrivalDay.msg')}',
+                        'maxpersonsmsg': '{f:translate(key:'maxpersons.msg')}',
+                    <f:format.raw>}</f:format.raw>,
+                    restrictions: {jsconfig -> f:format.json()},
+                    daysAllowedArrival: [<f:for each="{days}" as="day" iteration="Iterator">{day}<f:if condition="!{Iterator.isLast}">,</f:if></f:for>],
+                    dateFormat: "<f:translate key='booking.momentDateFormat' />",
+                    lang: '{f:translate(key:'booking.lang')}',
+                    uid: {uid},
+                    enableAPI: {enableAPI},
+                    keepParams: {keepParams},
+                    allowedParams: [<f:if condition="{allowedParams}"><f:then><f:for each="{v:iterator.explode(content: '{allowedParams}', glue: ',')}" as="param" iteration="iterator"><f:if condition="{iterator.isLast}"><f:then>'{param}'</f:then><f:else>'{param}', </f:else></f:if></f:for></f:then><f:else>'all'</f:else></f:if>],
+                    travelperiods: [
+                            <f:for each="{linkedData.travelperiods}" as="tp">
+                                ["<f:format.date format="Y-m-d">{tp.start}</f:format.date>","<f:format.date format="Y-m-d">{tp.end}</f:format.date>"],
+                            </f:for>
+                            ]
+                    <f:format.raw>}</f:format.raw>);
+            <f:format.raw>}</f:format.raw>);
+        </v:asset.script>
+        <div class="hsforms-row rooms">
+            <v:iterator.loop iteration="Iterator" count="{minrooms}">
+                <!-- rendering room row section -->
+                <f:render section="roomRow" arguments="{_all}" />
+            </v:iterator.loop>
+        </div>
+        <!-- Promocode block -->
+        <f:if condition="{promocode}">
+            <f:then>
+                <input type="hidden" class="promotion-code" value="{promocode}" name="promocode" id="promocode-{uid}" />
+            </f:then>
+            <f:else>
+                <f:if condition="!{promocode_flag}">
+                    <div class="hsforms-row">
+                        <div class="hsforms-col-sm">
+                            <div class="item promocode">
+                                <a href="javascript:void()" class="promocode-link link" id="promocode-link-{uid}">{f:translate(key:'form_add_promotion_code')}</a>
+                                <div class="promocode-box">
+                                    <label for="promocode-{uid}">{f:translate(key:'form_promotion_code_label')}</label>
+                                    <input type="text" name="promocode" class="promotion-code " id="promocode-{uid}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:if>
+            </f:else>
+        </f:if>
+
+        <!-- Ratecode block -->
+        <f:if condition="!{rate_flag}">
+            <f:then>
+                <f:for each="{linkedData.rates}" as="ratecode" iteration="Iterator">
+                    <div class="hsforms-row">
+                        <div class="hsforms-col-sm">
+                            <div class="item ratecode-item">
+                                <div class="ratecode-box">
+                                    <label for="ratecode-{uid}-{ratecode.uid}">{f:translate(key:'form_rate_code_label')}</label>
+                                    <input type="text" name="ratecode{Iterator.cycle}" class="ratecode " id="ratecode-{uid}-{ratecode.uid}" value="{ratecode.code}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:for each="{linkedData.rates}" as="ratecode" iteration="Iterator">
+                    <input type="hidden" name="ratecode{Iterator.cycle}" class="ratecode " id="ratecode-{uid}-{ratecode.uid}" value="{ratecode.code}" />
+                </f:for>
+            </f:else>
+        </f:if>
+
+        <div class="hsforms-row">
+            <f:if condition="!{addrooms_flag}">
+                <!-- Add Rooms Btn -->
+                <div class="add-rooms">
+                    <a href="javascript:void()" class="add-room link">{f:translate(key:'form_add_room')}</a>
+                </div>
+            </f:if>
+            <!-- Submit button -->
+            <div class="item hsforms-submit">
+                <input type="submit" class="button" value="{f:translate(key:'form_submit')}" />
+            </div>
+        </div>
+
+        <f:if condition="{colorConfig} && !{legends_flag}">
+            <!-- colors and their labels -->
+            <f:render section="lenegds" arguments="{_all}" />
+        </f:if>
+    </form>
+    <div class="hidden-rooms">
+        <v:iterator.loop iteration="Iterator" count="{maxrooms}">
+            <f:if condition="{Iterator.cycle} > {minrooms}">
+                <div class="room-section">
+                    <!-- rendering room row section -->
+                    <f:alias map="{removeLink: 'yes'}">
+                        <f:render section="roomRow" arguments="{_all}" />
+                    </f:alias>
+                </div>
+            </f:if>
+        </v:iterator.loop>
+    </div>
+
+</div>
+</f:section>
+
+<f:section name="lenegds">
+    <div class="hsforms_legend">
+        <div class="holder">
+            <f:if condition="{colorConfig.name1}">
+                <div>
+                    <span class="color-box" style="background: {colorConfig.color1};"></span>
+                    <span>{colorConfig.name1}</span>
+                </div>
+            </f:if>
+            <f:if condition="{colorConfig.name2}">
+                <div>
+                    <span class="color-box" style="background: {colorConfig.color2};"></span>
+                    <span>{colorConfig.name2}</span>
+                </div>
+            </f:if>
+            <f:if condition="{colorConfig.name3}">
+                <div>
+                    <span class="color-box" style="background: {colorConfig.color3};"></span>
+                    <span>{colorConfig.name3}</span>
+                </div>
+            </f:if>
+            <f:if condition="{colorConfig.name4}">
+                <div>
+                    <span class="color-box" style="background: {colorConfig.color4};"></span>
+                    <span>{colorConfig.name4}</span>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</f:section>
+
+<!-- Room Row section -->
+<f:section name="roomRow">
+    <div class="row{Iterator.cycle} room-row">
+        <div class="h3">{f:translate(key:'form_room')} {Iterator.cycle}</div>
+        <!-- Interval selector -->
+        <div class="hsform-fields">
+            <!-- date fields -->
+            <div class="hsforms-col-sm dates">
+                <div class="date1-box item">
+                    <label for="input_de{Iterator.cycle}-{uid}"><f:translate key="date_from_label" /></label>
+                    <input id="input_de{Iterator.cycle}-{uid}" class="hsforms-input date1" type="text" name="cal_de{Iterator.cycle}" />
+                </div>
+                <div class="date2-box item">
+                    <label for="input_de_to{Iterator.cycle}-{uid}"><f:translate key="date_to_label" /></label>
+                    <input id="input_de_to{Iterator.cycle}-{uid}" class="hsforms-input date2" type="text" name="cal_de_to{Iterator.cycle}" />
+                </div>
+                <!-- in-content cal -->
+                <div class="booker-in-content"></div>
+            </div>
+            <div class="humans">
+                <div class="hsforms-col-sm">
+                    <!-- Adults selector -->
+                    <div class="item">
+                        <label for="adults{Iterator.cycle}-{uid}">{f:translate(key:'form_no_adults_label')}</label>
+                        <f:if condition="{defadults} >= {minadults} && {defadults} <= {maxadults}">
+                            <f:then>
+                                <v:variable.set name="defAdults" value="{defadults}" />
+                            </f:then>
+                            <f:else>
+                                <v:variable.set name="defAdults" value="{minadults}" />
+                            </f:else>
+                        </f:if>
+                        <input type="number" data-maxpersons="{maxpersons}" data-minpersons="{minpersons}" class="adults " id="adults{Iterator.cycle}-{uid}" value="{defAdults}" name="adults{Iterator.cycle}" min="{minadults}" max="{maxadults}"/>
+                    </div>
+                </div>
+                
+                <div class="hsforms-col-sm">
+                    <!-- Children selector -->
+                    <f:if condition="{maxchildren} > 0">
+                        <div class="item">
+                            <label for="children{Iterator.cycle}-{uid}">{f:translate(key:'form_no_children_label')}</label>
+                            <f:if condition="{defchildren} >= {minchildren} && {defchildren} <= {maxchildren}">
+                                <f:then>
+                                    <v:variable.set name="defChildren" value="{defchildren}" />
+                                </f:then>
+                                <f:else>
+                                    <v:variable.set name="defChildren" value="{minchildren}" />
+                                </f:else>
+                            </f:if>
+                            <input type="number" data-maxpersons="{maxpersons}" data-minpersons="{minpersons}" data-children-box-id="children-box-{uid}-{Iterator.cycle}" class="children " id="children{Iterator.cycle}-{uid}" value="{defChildren}" name="children{Iterator.cycle}" min="{minchildren}" max="{maxchildren}"/>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+            <f:if condition="!{segment_flag}" >
+                <!-- Segment selector -->
+                <f:if condition="{linkedData.segments}">
+                    <div class="hsforms-col-sm">
+                        <div class="item segment form-group">
+                            <label for="segment{Iterator.cycle}-{uid}">{f:translate(key:'form_segment_label')}</label>
+                            <select name="segment{Iterator.cycle}" class="segments " id="segment{Iterator.cycle}-{uid}">
+                                <option value="">{f:translate(key:'form_segment_all_option')}</option>
+                                <f:for each="{linkedData.segments}" as="segment">
+                                    <option value="{segment.code}">{segment.title}</option>
+                                </f:for>
+                            </select>
+                        </div>
+                    </div>
+                </f:if>
+            </f:if>
+            <f:if condition="{removeLink}">
+                <!-- Remove room button only for hidden rows -->
+                <a href="javascript:void()" class="remove-room link item">{f:translate(key:'form_remove')}</a>
+            </f:if>
+
+        </div>
+        <!-- Children Ages -->
+        <div class="childrens-age-box" id="children-box-{uid}-{Iterator.cycle}"></div>
+        <div style="display: none" class="js-child-age-template">
+            <div class="item">
+                <label for="">{f:translate(key:'form_child_age_label', arguments: {0: '1'})}</label>
+                <select class="hsforms-select child-age">
+                    <option value="0">{f:translate(key:'form_child_age_below_option')} 1 {f:translate(key:'form_child_age_year_option')}</option>
+                    <option value="1">1 {f:translate(key:'form_child_age_year_option')}</option>
+                    <option value="2">2 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="3">3 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="4">4 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="5">5 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="6">6 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="7">7 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="8">8 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="9">9 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="10">10 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="11">11 {f:translate(key:'form_child_age_years_option')}</option>
+                    <option value="12">12 {f:translate(key:'form_child_age_years_option')}</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+</f:section>

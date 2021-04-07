@@ -1,0 +1,117 @@
+plugin.tx_hsforms_form {
+    view {
+        templateRootPaths.0 = EXT:{extension.extensionKey}/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_hsforms_form.view.templateRootPath}
+        partialRootPaths.0 = EXT:hsforms/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_hsforms_form.view.partialRootPath}
+        layoutRootPaths.0 = EXT:hsforms/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_hsforms_form.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_hsforms_form.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+    settings {
+        config {
+            bookingUrl = {$plugin.tx_hsforms_form.settings.config.bookingUrl}
+            s8key = {$plugin.tx_hsforms_form.settings.config.s8key}
+        }
+        view {
+            modalTitle = {$plugin.tx_hsforms_form.settings.view.modalTitle}
+            buttonTitle = {$plugin.tx_hsforms_form.settings.view.buttonTitle}
+            description = {$plugin.tx_hsforms_form.settings.view.description}
+            additionalClasses = {$plugin.tx_hsforms_form.settings.view.additionalClasses}
+            showChildCategories = {$plugin.tx_hsforms_form.settings.view.showChildCategories}
+            showNumberOfRooms = {$plugin.tx_hsforms_form.settings.view.showNumberOfRooms}
+            hidePromotion = {$plugin.tx_hsforms_form.settings.view.hidePromotion}
+            showRoomType = {$plugin.tx_hsforms_form.settings.view.showRoomType}
+            showWebSalesCategory = {$plugin.tx_hsforms_form.settings.view.showWebSalesCategory}
+            hideRate = {$plugin.tx_hsforms_form.settings.view.hideRate}
+            hideSegment = {$plugin.tx_hsforms_form.settings.view.hideSegment}
+            hideLegends = {$plugin.tx_hsforms_form.settings.view.hideLegends}
+            defaultSegmentImage = {$plugin.tx_hsforms_form.settings.view.defaultSegmentImage}
+            toastrPositionClass = {$plugin.tx_hsforms_form.settings.view.toastrPositionClass}
+            keepParams = {$plugin.tx_hsforms_form.settings.view.keepParams}
+            hideRoomslink = {$plugin.tx_hsforms_form.settings.view.hideRoomslink}
+        }
+        validation {
+            minNumOfPersons = {$plugin.tx_hsforms_form.settings.validation.minNumOfPersons}
+            maxNumOfPersons = {$plugin.tx_hsforms_form.settings.validation.maxNumOfPersons}
+            minNumOfAdults = {$plugin.tx_hsforms_form.settings.validation.minNumOfAdults}
+            maxNumOfAdults = {$plugin.tx_hsforms_form.settings.validation.maxNumOfAdults}
+            defAdults = {$plugin.tx_hsforms_form.settings.validation.defAdults}
+            minNumOfChildren = {$plugin.tx_hsforms_form.settings.validation.minNumOfChildren}
+            maxNumOfChildren = {$plugin.tx_hsforms_form.settings.validation.maxNumOfChildren}
+            defChildren = {$plugin.tx_hsforms_form.settings.validation.defChildren}
+            minNumOfRooms = {$plugin.tx_hsforms_form.settings.validation.minNumOfRooms}
+            maxNumOfRooms = {$plugin.tx_hsforms_form.settings.validation.maxNumOfRooms}
+            minLengthOfStay = {$plugin.tx_hsforms_form.settings.validation.minLengthOfStay}
+            maxLengthOfStay = {$plugin.tx_hsforms_form.settings.validation.maxLengthOfStay}
+            daysFromNow = {$plugin.tx_hsforms_form.settings.validation.daysFromNow}
+            daysTilEnd = {$plugin.tx_hsforms_form.settings.validation.daysTilEnd}
+            lastBookingDate = {$plugin.tx_hsforms_form.settings.validation.lastBookingDate}
+            daysAllowed = {$plugin.tx_hsforms_form.settings.validation.daysAllowed}
+            allowedParams = {$plugin.tx_hsforms_form.settings.validation.allowedParams}
+            buffer = {$plugin.tx_hsforms_form.settings.validation.buffer}
+        }
+    }
+}
+
+plugin.tx_hsforms_api.view < plugin.tx_hsforms_form.view
+ajaxColorsCall = PAGE
+ajaxColorsCall {
+    typeNum = 5001
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type: application/json, utf-8
+        debug = 0
+        no_cache = 1
+        admPanel = 0
+    }
+    10 < tt_content.list.20.hsforms_api
+}
+
+
+# these classes are only used in auto-generated templates
+plugin.tx_hsforms._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-hsforms table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-hsforms table th {
+        font-weight:bold;
+    }
+
+    .tx-hsforms table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)

@@ -1,0 +1,97 @@
+# customsubcategory=view=LLL:EXT:hsforms/Resources/Private/Language/locallang.xlf:cat.view
+# customsubcategory=validation=LLL:EXT:hsforms/Resources/Private/Language/locallang.xlf:cat.validation
+# customsubcategory=config=LLL:EXT:hsforms/Resources/Private/Language/locallang.xlf:cat.config
+plugin.tx_hsforms_form {
+    view {
+        # cat=plugin.tx_hsforms_form/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:hsforms/Resources/Private/Templates/
+        # cat=plugin.tx_hsforms_form/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:hsforms/Resources/Private/Partials/
+        # cat=plugin.tx_hsforms_form/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:hsforms/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_hsforms_form//a; type=string; label=Default storage PID
+        storagePid =
+    }
+    settings {
+        config {
+            # cat=plugin.tx_hsforms_form/config; type=string; label=URL der IBE
+            bookingUrl = https://ibe.onm.de/
+            # cat=plugin.tx_hsforms_form/config; type=string; label=Suite8 Key (if any)
+            s8key =
+        }
+        view {
+            # cat=plugin.tx_hsforms_form/view/001; type=string; label=Titel des Buchungsformulars
+            modalTitle = Verfügbarkeitsabfrage
+            # cat=plugin.tx_hsforms_form/view/001; type=string; label=Titel des Buchungs-Buttons
+            buttonTitle = zur Buchung
+            # cat=plugin.tx_hsforms_form/view/002; type=string; label=Lead Text im Buchungsformular
+            description =
+            # cat=plugin.tx_hsforms_form/view/003; type=string; label=zusätzliche CSS-Klassen
+            additionalClasses =
+            # cat=plugin.tx_hsforms_form/view/004; type=boolean; label=Auswahl der Kinder in den Alterskategorien anzeigen
+            showChildCategories = 1
+            # cat=plugin.tx_hsforms_form/view/005; type=boolean; label=Auswahl der Anzahl der Zimmer anzeigen
+            showNumberOfRooms = 0
+            # cat=plugin.tx_hsforms_form/view/006; type=boolean; label=Feld für die Eingabe eines Web Promotion Code anzeigen
+            hidePromotion = 1
+            # cat=plugin.tx_hsforms_form/view/007; type=boolean; label=Auswahl einer  Zimmerkategorie anzeigen
+            showRoomType = 0
+            # cat=plugin.tx_hsforms_form/view/008; type=boolean; label=Auswahl einer  Webverkaufskategorie anzeigen
+            showWebSalesCategory = 0
+            # cat=plugin.tx_hsforms_form/view/009; type=boolean; label=Auswahl einer Rate anzeigen
+            hideRate = 1
+            # cat=plugin.tx_hsforms_form/view/010; type=boolean; label=Segment ausblenden
+            hideSegment = 0
+            # cat=plugin.tx_hsforms_form/view/011; type=string; label=Default Segment image
+            defaultSegmentImage = EXT:hsforms/Resources/Public/Images/default-segment.jpg
+            # cat=plugin.tx_hsforms_form/view/012; type=string; label=toastrPositionClass e.g. toast-top-right, toast-top-center, toast-bottom-left etc. https://codeseven.github.io/toastr/demo.html
+            toastrPositionClass = toast-top-full-width
+            # cat=plugin.tx_hsforms_form/view/013; type=boolean; label=Abfrageparameter beibehalten
+            keepParams = 1
+            # cat=plugin.tx_hsforms_form/view/014; type=boolean; label=Legenden ausblenden
+            hideLegends = 0
+            # cat=plugin.tx_hsforms_form/view/015; type=boolean; label= It hides add room link
+            hideRoomslink = 0
+        }
+        validation {
+            # cat=plugin.tx_hsforms_form/validation/001; type=int+; label=minimale Anzahl Personen pro Buchung
+            minNumOfPersons = 1
+            # cat=plugin.tx_hsforms_form/validation/002; type=int+; label=maximale Anzahl Personen pro Buchung
+            maxNumOfPersons = 10
+            # cat=plugin.tx_hsforms_form/validation/003; type=int+; label=minimale Anzahl Erwachsener pro Buchung
+            minNumOfAdults = 1
+            # cat=plugin.tx_hsforms_form/validation/004; type=int+; label=maximale Anzahl Erwachsener pro Buchung
+            maxNumOfAdults = 10
+            # cat=plugin.tx_hsforms_form/validation/004; type=int+; label=Standard (Ausgewählt)
+            defAdults = 1
+            # cat=plugin.tx_hsforms_form/validation/005; type=int+; label=minimale Anzahl Kinder pro Buchung
+            minNumOfChildren = 0
+            # cat=plugin.tx_hsforms_form/validation/006; type=int+; label=maximale Anzahl Kinder pro Buchung
+            maxNumOfChildren = 4
+            # cat=plugin.tx_hsforms_form/validation/006; type=int+; label=Standard (Ausgewählt)
+            defChildren = 0
+            # cat=plugin.tx_hsforms_form/validation/007; type=int+; label=minimale Anzahl Zimmer pro Buchung
+            minNumOfRooms = 1
+            # cat=plugin.tx_hsforms_form/validation/008; type=int+; label=maximale Anzahl Zimmer pro Buchung
+            maxNumOfRooms = 2
+            # cat=plugin.tx_hsforms_form/validation/009; type=int+; label=minimale Anzahl von Übernachtungen
+            minLengthOfStay = 1
+            # cat=plugin.tx_hsforms_form/validation/010; type=int+; label=maximale Anzahl Personen von Übernachtungen
+            maxLengthOfStay = 99
+            # cat=plugin.tx_hsforms_form/validation/011; type=int+; label=buchbar ab x Tagen
+            daysFromNow = 0
+            # cat=plugin.tx_hsforms_form/validation/012; type=int+; label= date after these many days will be the last date in booker which can be booked. It also depends on lastBookingDate, if lastBookingDate will be a future date then min of both will be picked.
+            daysTilEnd = 365
+            # cat=plugin.tx_hsforms_form/validation/013; type=string; label= Last date when a booker will show dates as enabled. It relates to the other field: daysTilEnd as well. If this date will be in future then minimum date will be taken. Either this date or date after daysTilEnd date. If it will be in past then date after daysTilEnd will be picked.
+            lastBookingDate = 1970-01-01 00:00:01
+            # cat=plugin.tx_hsforms_form/validation/014; type=string; label= This is integer of 1111111 binary (7 ones) means all days are allowed.
+            daysAllowed = 127
+            # cat=plugin.tx_hsforms_form/validation/015; type=string; label= Erlaubte Abfrageparameter
+            allowedParams =
+            # cat=plugin.tx_hsforms_form/validation/016; type=string; label= minLOS aus Reiseperioden entfernen
+            buffer = 0
+        }
+    }
+}

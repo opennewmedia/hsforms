@@ -1,0 +1,47 @@
+<f:render partial="Assets" arguments="{extConfig}" />
+<div class="tx-hsform">
+    <f:if condition="{view} == '0'">
+        <f:then>
+            <f:render section="button" arguments="{_all}"/>
+        </f:then>
+        <f:else>
+            <f:render section="form" arguments="{_all}"/>
+        </f:else>
+    </f:if>
+</div>
+
+<f:section name="button">
+    <a href="#booker{uid}" class="btn btn-primary {cssclasses}" rel="modal:open">
+        <i class="icon icon-calendar"></i>
+        {btnlabel}
+    </a>
+
+    <div class="modal" id="booker{uid}" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalContainer{uid}-title">
+            <header class="modal__header">
+                <div class="modal__title" id="modalContainer{uid}-title">
+                    <f:render partial="Title" arguments="{title: modaltitle}" />
+                </div>
+            </header>
+            <main class="modal__content" id="modalContainer{uid}-content">
+                <f:if condition="{text}">
+                    <p class="lead">
+                        <f:format.html parseFuncTSPath="lib.parseFunc">{text}</f:format.html>
+                    </p>
+                </f:if>
+                <f:alias map="{layout: 1}">
+                    <f:render partial="BookingForm" section="Main" arguments="{_all}" />
+                </f:alias>
+            </main>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="form">
+    <div class="tx-hsforms-form {settings.view.additionalClasses}">
+        <f:render partial="Title" arguments="{title: modaltitle}" />
+        <f:render partial="BookingForm" section="Main" arguments="{_all}" />
+    </div>
+</f:section>

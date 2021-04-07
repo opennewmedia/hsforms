@@ -1,0 +1,22 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:if condition="{loadJQuery}">
+    <v:asset.script path="/typo3conf/ext/hsforms/Resources/Public/build/vendor/jquery/jquery.min.js" name="jQuery" overwrite="0" standalone="1" external="1" movable="0" />
+</f:if>
+<f:if condition="{loadMomentjs}">
+    <v:asset.script path="typo3conf/ext/hsforms/Resources/Public/build/vendor/moment/moment-with-locales.min.js" name="momentjs" overwrite="0" group="hsforms" movable="1" dependencies="jquery" />
+</f:if>
+<f:if condition="{loadOnmCal}">
+    <v:asset.style path="typo3conf/ext/hsforms/Resources/Public/build/vendor/cal/css/cal.min.css" name="onmcal_css" overwrite="0" />
+    <v:asset.script path="typo3conf/ext/hsforms/Resources/Public/build/vendor/cal/js/cal.min.js" name="onm_cal" overwrite="0" group="hsforms" movable="1" dependencies="jquery" />
+</f:if>
+<f:if condition="{loadToastr}">
+    <v:asset.style path="typo3conf/ext/hsforms/Resources/Public/build/vendor/toastr/css/toastr.min.css" name="toastr_css" overwrite="0" />
+    <v:asset.script path="typo3conf/ext/hsforms/Resources/Public/build/vendor/toastr/js/toastr.min.js" name="toastr" overwrite="0" group="hsforms" movable="1" dependencies="jquery" />
+</f:if>
+<v:asset.style path="EXT:hsforms/Resources/Public/Css/hsforms.min.css" name="hsforms_css" overwrite="0" />
+<v:asset.script path="EXT:hsforms/Resources/Public/JavaScript/Dist/hsforms.min.js" name="hsforms" overwrite="0" group="hsforms" movable="1" dependencies="jquery" />
+<!-- JqueryModal -->
+<v:asset.script path="typo3conf/ext/hsforms/Resources/Public/build/vendor/jquery-modal/jquery.modal.min.js" name="jquerymodaljs" overwrite="0" group="hsforms" />
+<v:asset.style path="typo3conf/ext/hsforms/Resources/Public/build/vendor/jquery-modal/jquery.modal.min.css" name="jquerymodalcss" overwrite="0" group="hsforms" />
+<!-- Responsive Toolkit -->
+<v:asset.script path="typo3conf/ext/hsforms/Resources/Public/build/vendor/responsive-toolkit/bootstrap-toolkit.min.js" name="bootstrap-toolkit"  group="hsforms"overwrite="0" />

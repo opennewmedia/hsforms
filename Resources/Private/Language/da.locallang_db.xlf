@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-08-09T15:33:58Z" product-name="hsforms" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="tx_hsforms_form.name">
+				<source>Availability check form</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_form.description">
+				<source>A availability check form with predefined config.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_ibelink">
+				<source>Link to IBE:</source>
+			</trans-unit>
+			<trans-unit id="tabs.display">
+				<source>Display options</source>
+			</trans-unit>
+			<trans-unit id="tabs.restrictions">
+				<source>Restrictions</source>
+			</trans-unit>
+			<trans-unit id="tabs.pref">
+				<source>Preferences</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_view">
+				<source>View:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_view.0">
+				<source>Button</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_view.1">
+				<source>Form</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_btnlabel">
+				<source>Button label:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_modaltitle">
+				<source>Modal- and form-title:</source>
+				<target>Modal- and form-title:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_allowedparams">
+				<source>Allowed Query Parameters:</source>
+				<target>Tilladte forespørgselsparametre:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_text">
+				<source>Introductory text in popup (optional):</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_cssclasses">
+				<source>CSS classes (optional):</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_min">
+				<source>Minimum:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_max">
+				<source>Maximum:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_def">
+				<source>Default (Selected):</source>
+				<target>Standard (valgt):</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed">
+				<source>Arrival Days allowed:</source>
+			</trans-unit>
+			<trans-unit id="palette.hsformspersons">
+				<source>Persons Restriction:</source>
+			</trans-unit>
+			<trans-unit id="palette.hsformsadults">
+				<source>Adults Restriction:</source>
+			</trans-unit>
+			<trans-unit id="palette.hsformschildren">
+				<source>Children Restriction:</source>
+			</trans-unit>
+			<trans-unit id="palette.hsformsnights">
+				<source>Nights Restriction:</source>
+			</trans-unit>
+			<trans-unit id="palette.hsformsrooms">
+				<source>Rooms Restriction:</source>
+			</trans-unit>
+			<trans-unit id="palette.hsformsflags">
+				<source>Show/Hide Toggles:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_legends_flag">
+				<source>Hide Legends:</source>
+				<target>Skjul legender:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_addrooms_flag">
+				<source>Hide Add Room Link:</source>
+				<target>Tilføj pladshul:</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod">
+				<source>Travel Period</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment">
+				<source>Segment</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.code">
+				<source>Code:</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.title">
+				<source>Title:</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.description">
+				<source>Description:</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.image">
+				<source>Image:</source>
+			</trans-unit>
+			<trans-unit id="common.internal_name">
+				<source>Internal Name:</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_rate">
+				<source>Rate</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_rate.code">
+				<source>Rate-Code:</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.start">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.end">
+				<source>End</source>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.end.desc">
+				<source>This end date can be affected by "remove minLOS from travel periods" field from the main element settings.</source>
+				<target>Denne slutdato kan påvirkes af feltet "Fjern minLOS fra rejseperioder" fra hovedelementindstillingerne.</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.daysallowed">
+				<source>Days enabled</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_travelperiods">
+				<source>Travel Periods:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_promocode">
+				<source>Web Promotion Code for Block Reservations:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_promocode_flag">
+				<source>Hide Web Promotion Code:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_rate_flag">
+				<source>Hide Ratecode:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_segment_flag">
+				<source>Hide Segment:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_rates">
+				<source>Rate:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_segments">
+				<source>Segments:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysfromnow">
+				<source>Days from now:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daystillend">
+				<source>Days till end:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_lastbookingdate">
+				<source>Last booking date:</source>
+			</trans-unit>
+			<trans-unit id="tt_content.travelperiods_passed">
+				<source>All travel periods are in the past now.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_buffer_flag.desc">
+				<source>If this option will be checked then minimum number of nights will not be added into travel period(s).</source>
+				<target>Hvis denne indstilling vil blive markeret, tilføjes minimum antal overnatninger ikke til rejseperioden (e).</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-08-09T15:33:58Z" product-name="hsforms" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="tx_hsforms_form.name">
+				<source>Availability check form</source>
+				<target>Verfügbarkeitsabfrage Formular / Buchen Button</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_form.description">
+				<source>A availability check form with predefined config.</source>
+				<target>Ein Verfügbarkeitsabfrage Formular / Buchen Button mit voreinstellbaren Restriktionen.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_ibelink">
+				<source>Link to IBE:</source>
+				<target>Link zur IBE:</target>
+			</trans-unit>
+			<trans-unit id="tabs.display">
+				<source>Display options</source>
+				<target>Darstellungsoptionen</target>
+			</trans-unit>
+			<trans-unit id="tabs.restrictions">
+				<source>Restrictions</source>
+				<target>Restriktionen</target>
+			</trans-unit>
+			<trans-unit id="tabs.pref">
+				<source>Preferences</source>
+				<target>Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_view">
+				<source>View:</source>
+				<target>Ansicht:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_view.0">
+				<source>Button</source>
+				<target>Button</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_view.1">
+				<source>Form</source>
+				<target>Formular</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_btnlabel">
+				<source>Button label:</source>
+				<target>Button Beschriftung</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_modaltitle">
+				<source>Modal- and form-title:</source>
+				<target>Modal- und Formular-Titel:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_text">
+				<source>Introductory text in popup (optional):</source>
+				<target>Einleitungs-Text im Popup (optional):</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_cssclasses">
+				<source>CSS classes (optional):</source>
+				<target>CSS Klassen (optional)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_min">
+				<source>Minimum:</source>
+				<target>Minimum:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_max">
+				<source>Maximum:</source>
+				<target>Maximum:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_def">
+				<source>Default (Selected):</source>
+				<target>Standard (Ausgewählt):</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed">
+				<source>Arrival Days allowed:</source>
+				<target>Erlaubte Anreisetage</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.1">
+				<source>Mo</source>
+				<target>Mo</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.2">
+				<source>Tu</source>
+				<target>Di</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.3">
+				<source>We</source>
+				<target>Mi</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.4">
+				<source>Th</source>
+				<target>Do</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.5">
+				<source>Fr</source>
+				<target>Fr</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.6">
+				<source>Sa</source>
+				<target>Sa</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysallowed.7">
+				<source>Su</source>
+				<target>So</target>
+			</trans-unit>
+			<trans-unit id="palette.hsformspersons">
+				<source>Persons Restriction:</source>
+				<target>Personen Restriktion:</target>
+			</trans-unit>
+			<trans-unit id="palette.hsformsadults">
+				<source>Adults Restriction:</source>
+				<target>Erwachsene Restriktion:</target>
+			</trans-unit>
+			<trans-unit id="palette.hsformschildren">
+				<source>Children Restriction:</source>
+				<target>Kinder Restriktion:</target>
+			</trans-unit>
+			<trans-unit id="palette.hsformsnights">
+				<source>Nights Restriction:</source>
+				<target>Nächte Restriktion:</target>
+			</trans-unit>
+			<trans-unit id="palette.hsformsrooms">
+				<source>Rooms Restriction:</source>
+				<target>Zimmer Restriktion:</target>
+			</trans-unit>
+			<trans-unit id="palette.hsformsflags">
+				<source>Show/Hide Toggles:</source>
+				<target>Toggles Anzeigen/Verstecken:</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod">
+				<source>Travel Period</source>
+				<target>Reisezeitraum</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment">
+				<source>Segment</source>
+				<target>Segment</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.code">
+				<source>Code:</source>
+				<target>Code:</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.title">
+				<source>Title:</source>
+				<target>Titel:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_allowedparams">
+				<source>Allowed Query Parameters:</source>
+				<target>Erlaubte Abfrageparameter:</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.description">
+				<source>Description:</source>
+				<target>Beschreibung:</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_segment.image">
+				<source>Image:</source>
+				<target>Bild:</target>
+			</trans-unit>
+			<trans-unit id="common.internal_name">
+				<source>Internal Name:</source>
+				<target>Interner Bezeichner:</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_rate">
+				<source>Rate</source>
+				<target>Rate</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_rate.code">
+				<source>Rate-Code:</source>
+				<target>Raten-Code</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.start">
+				<source>Start</source>
+				<target>Start-Datum</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.end">
+				<source>End</source>
+				<target>End-Datum</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.end.desc">
+				<source>This end date can be affected by "remove minLOS from travel periods" field from the main element settings.</source>
+				<target>Dieses Enddatum kann durch Entfernen des Feldes minLOS aus Reisezeiträumen in den Einstellungen des Hauptelements beeinflusst werden.</target>
+			</trans-unit>
+			<trans-unit id="tx_hsforms_domain_model_travelperiod.daysallowed">
+				<source>Days enabled</source>
+				<target>Aktivierte Tage</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_travelperiods">
+				<source>Travel Periods:</source>
+				<target>Reise-Zeiträume</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_customtemplate">
+				<source>Custom Template:</source>
+				<target>Benutzerdefinierte Vorlage:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_promocode">
+				<source>Web Promotion Code for Block Reservations:</source>
+				<target>Web-Promotion-Code für Blockreservierungen:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_promocode_flag">
+				<source>Hide Web Promotion Code:</source>
+				<target>Web-Promotion Code verstecken</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_rate_flag">
+				<source>Hide Ratecode:</source>
+				<target>Raten-Code verstecken</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_keepparams">
+				<source>Keep Parameters:</source>
+				<target>Abfrageparameter beibehalten</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_segment_flag">
+				<source>Hide Segment:</source>
+				<target>Segment-Auswahl verstecken</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_legends_flag">
+				<source>Hide Legends:</source>
+				<target>Legende verstecken:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_buffer_flag">
+				<source>Remove minLOS from travel periods:</source>
+				<target>minLOS aus Reiseperioden entfernen:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_buffer_flag.desc">
+				<source>If this option will be checked then minimum number of nights will not be added into travel period(s).</source>
+				<target>Wenn diese Option aktiviert ist, wird die Mindestanzahl von Nächten nicht in den Reisezeitraum(en) berücksichtigt.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_addrooms_flag">
+				<source>Hide Add Room Link:</source>
+				<target>Zimmer hinzufügen verstecken:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_rates">
+				<source>Rate:</source>
+				<target>Rate:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_segments">
+				<source>Segments:</source>
+				<target>Segmente:</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daysfromnow">
+				<source>Days from now:</source>
+				<target>Tage ab heute</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_daystillend">
+				<source>Days till end:</source>
+				<target>Tage bis zum Ende</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_hsforms_form_lastbookingdate">
+				<source>Last booking date:</source>
+				<target>Letztes mögliches Buchungsdatum</target>
+			</trans-unit>
+			<trans-unit id="tt_content.travelperiods_passed">
+				<source>All travel periods are in the past now.</source>
+				<target>Alle Reiseperioden liegen bereits in der Vergangenheit.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

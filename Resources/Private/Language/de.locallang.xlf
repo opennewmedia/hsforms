@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-08-09T15:33:58Z" product-name="hsforms" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="btnlabel.default">
+				<source>Book the room</source>
+				<target>Zimmer buchen</target>
+			</trans-unit>
+            <trans-unit id="tx_hsforms_form.name">
+				<source>Availability check</source>
+				<target>Verfügbarkeitsabfrage</target>
+			</trans-unit>
+			<trans-unit id="cat.view">
+				<source>Display</source>
+				<target>Anzeige</target>
+			</trans-unit>
+			<trans-unit id="module.msg.nodata">
+				<source>There are no bookers and travelperiods in DB.</source>
+				<target>Es gibt keine Bucher und Reisezeiträume in der DB.</target>
+			</trans-unit>
+			<trans-unit id="cat.validation">
+				<source>Validation</source>
+				<target>Validierung</target>
+			</trans-unit>
+			<trans-unit id="cat.config">
+				<source>Configurations</source>
+				<target>Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="booking.culture">
+				<source>en-GB</source>
+				<target>de-DE</target>
+			</trans-unit>
+			<trans-unit id="booking.lang">
+				<source>en</source>
+				<target>de</target>
+			</trans-unit>
+			<trans-unit id="booking.s8LanguageCode">
+				<source>E</source>
+				<target>D</target>
+			</trans-unit>
+			<trans-unit id="booking.momentDateFormat">
+				<source>DD/MM/YYYY</source>
+				<target>DD.MM.YYYY</target>
+			</trans-unit>
+			<trans-unit id="defaultSegment.title">
+				<source>Show all accommodations</source>
+				<target>Alle Unterkünfte anzeigen</target>
+			</trans-unit>
+			<trans-unit id="restriction.maxRange.msg">
+				<source>Your selection was limited to {maxnights} nights.</source>
+				<target>Ihre Auswahl wurde auf {maxnights} Übernachtungen begrenzt.</target>
+			</trans-unit>
+			<trans-unit id="restriction.minRange.msg">
+				<source>Your selection has been extended to {minnights} nights.</source>
+				<target>Ihre Auswahl wurde auf {minnights} Übernachtungen erweitert.</target>
+			</trans-unit>
+			<trans-unit id="adaptation.dateRange.msg">
+				<source>This period is not selectable!</source>
+				<target>Dieser Zeitraum ist nicht wählbar!</target>
+			</trans-unit>
+			<trans-unit id="maxpersons.msg">
+				<source>The maximum number of people has been reached.</source>
+				<target>Die maximale Anzahl an Personen wurde erreicht.</target>
+			</trans-unit>
+			<trans-unit id="restriction.arrivalDay.msg">
+				<source>Arrivals are only possible on days {0}. Please choose another day of arrival.</source>
+				<target>Eine Anreise ist nur an den Tagen {0} möglich. Bitte wählen Sie einen anderen Anreisetag.</target>
+			</trans-unit>
+			<trans-unit id="date_from_label">
+				<source>From: </source>
+				<target>Ab: </target>
+			</trans-unit>
+			<trans-unit id="date_to_label">
+				<source>To: </source>
+				<target>bis: </target>
+			</trans-unit>
+
+			<trans-unit id="form_add_promotion_code">
+				<source>Add promotion code</source>
+				<target>Promotion-Code hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="form_promotion_code_label">
+				<source>Promotion code:</source>
+				<target>Promotion-Code:</target>
+			</trans-unit>
+			<trans-unit id="form_rate_code_label">
+				<source>Rate code:</source>
+				<target>Raten-Code:</target>
+			</trans-unit>
+			<trans-unit id="form_add_room">
+				<source>Add room</source>
+				<target>Zimmer hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="form_submit">
+				<source>Check availability</source>
+				<target>Verfügbarkeit prüfen</target>
+			</trans-unit>
+			<trans-unit id="form_remove">
+				<source>Remove Room</source>
+				<target>Zimmer Entfernen</target>
+			</trans-unit>
+			<trans-unit id="form_room">
+				<source>Room</source>
+				<target>Zimmer</target>
+			</trans-unit>
+			<trans-unit id="form_travel_period_label">
+				<source>Travel period:</source>
+				<target>Reisezeitraum:</target>
+			</trans-unit>
+			<trans-unit id="form_no_adults_label">
+				<source>Number of adults:</source>
+				<target>Anzahl Erwachsene:</target>
+			</trans-unit>
+			<trans-unit id="form_no_children_label">
+				<source>Number of children:</source>
+				<target>Anzahl Kinder:</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_label">
+				<source>Age {0}. child:</source>
+				<target>Alter {0}. Kind:</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_below_option">
+				<source>Below</source>
+				<target>Unter</target>
+			</trans-unit>
+			<trans-unit id="form_segment_label">
+				<source>Segment:</source>
+				<target>Segment:</target>
+			</trans-unit>
+			<trans-unit id="form_segment_all_option">
+				<source>All</source>
+				<target>Alle</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_year_option">
+				<source>year</source>
+				<target>Jahr</target>
+			</trans-unit>
+			<trans-unit id="form_child_age_years_option">
+				<source>years</source>
+				<target>Jahre</target>
+			</trans-unit>
+			<trans-unit id="form_arrival">
+				<source>Arrival</source>
+				<target>Anreise</target>
+			</trans-unit>
+			<trans-unit id="form_departure">
+				<source>Depature</source>
+				<target>Abreise</target>
+			</trans-unit>
+			<trans-unit id="form_adults">
+				<source>Adults</source>
+				<target>Erwachsene</target>
+			</trans-unit>
+			<trans-unit id="form_children">
+				<source>Children</source>
+				<target>Kinder</target>
+			</trans-unit>
+			<trans-unit id="form_advantages">
+				<source>Your advantages</source>
+				<target>Ihre Vorteile</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

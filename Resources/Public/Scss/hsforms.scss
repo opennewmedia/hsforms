@@ -1,0 +1,255 @@
+@mixin setborder($which, $val) {
+    border-top-#{$which}-radius: $val;
+    border-bottom-#{$which}-radius: $val;
+    border-#{$which}: $val;
+}
+@mixin borderzero($which) {
+    @include setborder($which, 0);
+}
+@mixin responsive {
+    .bookingFormUI {
+        .hsform-fields {
+            flex-direction: column;
+            align-items: stretch;
+            .dates {
+                align-items: stretch;
+                .item {
+                    flex: 1;
+                }
+            }
+            .humans {
+                margin-top: 10px;
+                align-items: stretch;
+                .hsforms-col-sm {
+                    flex: 1;
+                }
+            }
+            .adults, .children {
+                max-width: none;
+            }
+        }
+        .promocode-box, .ratecode-box {
+            max-width: none;
+        }
+    }
+}
+.bookingForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    font-size: 1rem;
+    .promocode-box, .ratecode-box {
+        display: none;
+        flex-direction: column;
+        max-width: 300px;
+        input {
+            width: 100%;
+        }
+    }
+    .ratecode-box {
+        display: flex;
+    }
+    .date {
+        flex-grow: 2;
+
+    }
+    .h3 {
+        margin: 10px;
+        font-size: 1.7rem;
+    }
+    .bookingFormUI {
+        width: 100%;
+        .childrens-age-box {
+            margin-top: 10px;
+            margin-right: 0px;
+            display: flex;
+            max-width: 800px;
+            flex-wrap: wrap;
+            &:empty {
+                display: none;
+            }
+        }
+        
+        .room-row {
+            position: relative;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            margin: 0px 10px;
+            &.hsforms-submit {
+                margin-top: 10px;
+            }
+        }
+        .link {
+            color: #ff8c00;
+        }
+        .add-rooms {
+            padding: 1rem 1.5rem;
+            padding-left: 10px;
+        }
+        .hsforms-row {
+            margin: 10px auto;
+        }
+    }
+    .rooms {
+        display: flex;
+        flex-direction: column;
+    }
+    .hsform-fields {
+        display: flex;
+        align-items: end;
+        flex-wrap: wrap;
+        .adults, .children {
+            max-width: 100px;
+            box-sizing: border-box;
+        }
+        .dates {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .humans {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    input, select {
+        padding: 1rem 1.5rem;
+        border: 1px solid #d4d4d4;
+        border-radius: 3px;
+    }
+    label {
+        margin-bottom: 3px;
+    }
+    .hsforms-submit {
+        align-items: flex-start;
+    }
+    .button {
+        background-color: #ff8c00;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        color: #f4f4f4;
+        height: 100%;
+        cursor: pointer;
+    }
+    .segment {
+        flex-grow: 1;
+    }
+    .icon-calendar::before {
+        content: "\e835";
+    }
+    .hidden-rooms, .add-rooms {
+        display: none;
+    }
+    .date1span {
+        @include borderzero('right');
+        padding-right: 0px;
+    }
+    .date2span {
+        @include borderzero('left');
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .hsforms_legend {
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ffffff;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        display: none;
+    }
+    .onm-cal {
+        .hsforms_legend {
+            display: block;
+            margin: 0 18px;
+        }
+    }
+    .booker-in-content {
+        display: none;
+    }
+}
+
+// jquery modal styling
+.jquery-modal {
+    .modal {
+        overflow: visible;
+    }
+}
+// vertical form styling
+.vertical--form {
+    @include responsive;
+}
+
+// visibility classes for different media queries. (bootstrapped clone with 'onm-' prefix)
+@mixin hidden {
+    display: none;
+    visibility: hidden;
+}
+@mixin visible {
+    display: block;
+    visibility: visible;
+}
+.onm-d-none {
+    @include hidden;
+}
+.onm-d-block {
+    @include visible;
+}
+@media (max-width: 768px) {
+    @include responsive;
+}
+@media (max-width: 545px) {
+    @include responsive;
+    .bookingForm {
+        .hsform-fields {
+            .dates, .humans {
+                flex-direction: column;
+            }
+        }
+        .bookingFormUI {
+            width: 100%;
+            .button {
+                max-width: none;
+            }
+            .hsforms-submit {
+                align-items: stretch;
+            }
+        }
+    }
+}
+@media (min-width: 544px) {
+    .onm-d-sm-none {
+        @include hidden;
+    }
+    .onm-d-sm-block {
+        @include visible;
+    }
+}
+@media (min-width: 768px) {
+    .onm-d-md-none {
+        @include hidden;
+    }
+    .onm-d-md-block {
+        @include visible;
+    }
+}
+@media (min-width: 992px) {
+    .onm-d-lg-none {
+        @include hidden;
+    }
+    .onm-d-lg-block {
+        @include visible;
+    }
+}
+@media (min-width: 1200px) {
+    .onm-d-xl-none {
+        @include hidden;
+    }
+    .onm-d-xl-block {
+        @include visible;
+    }
+}

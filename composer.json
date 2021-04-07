@@ -1,0 +1,30 @@
+{
+    "name": "onm/hsforms",
+    "type": "typo3-cms-extension",
+    "description": "hsForms will show a form to book hotel rooms with some predefined configurations.",
+    "authors": [
+        {
+            "name": "Usman Ahmad",
+            "role": "Developer"
+        }
+    ],
+    "version": "2.1.4",
+    "require": {
+        "typo3/cms-core": ">=9.5.15 <= 10.4.99",
+        "fluidtypo3/vhs": ">=6.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ONM\\Hsforms\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Onm\\Hsforms\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "hsforms": "self.version",
+        "typo3-ter/hsforms": "self.version"
+    }
+}
