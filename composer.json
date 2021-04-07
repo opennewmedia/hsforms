@@ -9,9 +9,7 @@
         }
     ],
     "version": "2.1.4",
-    "license": [
-        "GPL-3.0-or-later"
-    ],
+    "license": "GPL-3.0-or-later",
     "require": {
         "typo3/cms-core": ">=9.5.15 <= 10.4.99",
         "fluidtypo3/vhs": ">=6.0.0"
