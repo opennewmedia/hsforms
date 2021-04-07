@@ -9,6 +9,9 @@
         }
     ],
     "version": "2.1.4",
+    "license": [
+        "GPL-3.0-or-later"
+    ],
     "require": {
         "typo3/cms-core": ">=9.5.15 <= 10.4.99",
         "fluidtypo3/vhs": ">=6.0.0"
@@ -24,7 +27,7 @@
         }
     },
     "replace": {
-        "hsforms": "self.version",
+        "onm/hsforms": "self.version",
         "typo3-ter/hsforms": "self.version"
     }
 }
