@@ -14,5 +14,3 @@ That's it.
 # ToDo
 - Testing on TYPO3 10
 - Translate labels into Deutsche
-
-If you find any issue please report at http://git.onm.local/typo3/hsforms or to ua@onm.de
