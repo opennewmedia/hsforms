@@ -1,14 +1,18 @@
 {
     "name": "onm/hsforms",
     "type": "typo3-cms-extension",
-    "description": "hsForms will show a form to book hotel rooms with some predefined configurations.",
+    "description": "hotelsuite FORM (hs FORMS) will show a form to book hotel rooms with some customized configurations. This plugin allows the creation of deep links and booking buttons in connection with the Internet booking engine \"hotelsuite IBE\" (https://www.hotelsuite.de). Sell rooms, vouchers, events, tables and much more! - Get in touch with us: Open New Media GmbH | Digital communication agency | Tel .: +49 261 30380-80 | E-Mail: info@onm.de | Web: https://www.onm.de | Hotel solutions: https://www.hotelsuite.de",
     "authors": [
         {
             "name": "Usman Ahmad",
             "role": "Developer"
+        },
+        {
+            "name": "Tobias Gräber",
+            "role": "Developer"
         }
     ],
-    "version": "2.1.5",
+    "version": "2.1.6",
     "license": "GPL-3.0-or-later",
     "require": {
         "typo3/cms-core": ">=9.5.15 <= 10.4.99",

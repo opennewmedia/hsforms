@@ -11,16 +11,16 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'hotelsuite Forms',
-    'description' => 'hotelsuite Forms will show a form to book hotel rooms with some customized configurations.',
-    'category' => 'fe',
-    'author' => 'Usman Ahmad',
-    'author_email' => 'ua@onm.de',
+    'title' => 'hotelsuite FORMS',
+    'description' => 'hotelsuite FORM (hs FORMS) will show a form to book hotel rooms with some customized configurations. This plugin allows the creation of deep links and booking buttons in connection with the Internet booking engine "hotelsuite IBE" (https://www.hotelsuite.de). Sell rooms, vouchers, events, tables and much more! - Get in touch with us: Open New Media GmbH | Digital communication agency | Tel .: +49 261 30380-80 | E-Mail: info@onm.de | Web: https://www.onm.de | Hotel solutions: https://www.hotelsuite.de',
+    'category' => 'plugin',
+    'author' => 'Usman Ahmad, Tobias Gräber',
+    'author_email' => 'ua@onm.de, tg@onm.de',
     'state' => 'beta',
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.1.5',
+    'version' => '2.1.6',
     'constraints' => [
         'depends' => [
             'typo3' => '9.5.15-10.4.99',
