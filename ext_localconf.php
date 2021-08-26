@@ -81,3 +81,5 @@ call_user_func(
         ];
     }
 );
+
+// ext_localconf.php
