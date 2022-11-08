@@ -13,6 +13,7 @@
         }
     ],
     "version": "2.1.6",
+    "license": "MIT",
     "license": "GPL-3.0-or-later",
     "require": {
         "typo3/cms-core": ">=9.5.15 <= 10.4.99",
@@ -29,7 +30,6 @@
         }
     },
     "replace": {
-        "onm/hsforms": "self.version",
-        "typo3-ter/hsforms": "self.version"
+       "typo3-ter/hsforms": "self.version"
     }
 }
