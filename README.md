@@ -13,4 +13,3 @@ That's it.
 
 # ToDo
 - Testing on TYPO3 10
-- Translate labels into Deutsche
