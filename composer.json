@@ -12,8 +12,7 @@
             "role": "Developer"
         }
     ],
-    "version": "2.1.6",
-    "license": "MIT",
+    "version": "2.1.7",
     "license": "GPL-3.0-or-later",
     "require": {
         "typo3/cms-core": ">=9.5.15 <= 10.4.99",
